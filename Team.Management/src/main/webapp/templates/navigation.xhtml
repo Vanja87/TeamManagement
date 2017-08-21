@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+     <ui:composition>
+        <h:form id="navigation" style="width: 100%">
+       <p:menu>
+			<p:submenu label="Manage projects">
+				<p:menuitem value="Projects" outcome="projects"
+					icon="ui-icon-star" />
+				<p:menuitem value="Tasks" outcome="tasks"
+					icon="ui-icon-star" />
+				<p:menuitem value="Bugs" outcome="bugs"
+					icon="ui-icon-star" />
+			</p:submenu>
+			<p:submenu label="Manage teams">
+				<p:menuitem value="Teams" outcome="teams"
+					icon="ui-icon-star" />
+				<p:menuitem value="Users" outcome="users"
+					icon="ui-icon-star" />
+			</p:submenu>
+			<p:submenu label="Manage clients">
+				<p:menuitem value="Clients" outcome="clients"
+					icon="ui-icon-star" />
+			</p:submenu>
+		</p:menu>
+		</h:form>
+     </ui:composition>
+</html>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+
+<ui:composition >
+	<h:form>
+		<p:messages autoUpdate="true" />
+
+		<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+			<p:outputLabel for="Name" value="Name:" />
+			<h:inputText id="Name" value="#{projectsController.project.name}" />
+			
+			<p:outputLabel for="Description" value="Description:" />
+			<h:inputText id="Description" value="#{projectsController.project.description}" />
+			
+			<p:outputLabel for="Status" value="Status:" />
+			<h:inputText id="Status" value="#{projectsController.project.status}" />
+			
+<!-- 			<p:outputLabel for="user" value="Created by:" />
+			<p:selectOneMenu id="user" value="#{projectsController.project.createdByUser}">
+				<f:selectItem itemLabel="Select One" itemValue="" />
+				<f:selectItems value="#{projectsController.users}" />
+			</p:selectOneMenu> -->
+
+		</h:panelGrid>
+		<p:commandButton value="Save" action="#{projectsController.save}" /> 
+	</h:form>
+
+</ui:composition>
+
+</html>
